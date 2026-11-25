@@ -9,7 +9,7 @@
    di versione qui sotto (es. v1 → v2). Così il browser capisce che
    c'è un aggiornamento, scarica i file nuovi e butta la cache vecchia.
    ============================================================ */
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "v4";
 const CACHE_NAME = `lista-spesa-${CACHE_VERSION}`;
 
 /* ============================================================
