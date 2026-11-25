@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Icona dell'app: carrello della spesa a linee neon su fondo scuro.
+       Il disegno resta dentro il cerchio centrale (zona sicura) così
+       Android può ritagliare l'icona a cerchio/goccia senza tagliarlo. -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#2a0f47"/>
+      <stop offset="0.6" stop-color="#14072a"/>
+      <stop offset="1" stop-color="#0b0414"/>
+    </radialGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4fd8"/>
+      <stop offset="0.5" stop-color="#00f0ff"/>
+      <stop offset="1" stop-color="#b36bff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <g fill="none" stroke="url(#neon)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- maniglia e cesto -->
+    <path d="M112 136 H150 L184 280 H352 L384 168 H162"/>
+    <!-- base del carrello -->
+    <path d="M184 280 L196 322 H360"/>
+    <!-- ruote -->
+    <circle cx="214" cy="366" r="22"/>
+    <circle cx="340" cy="366" r="22"/>
+  </g>
+
+  <!-- righe interne del cesto, più sottili -->
+  <g fill="none" stroke="#ff4fd8" stroke-width="7" stroke-linecap="round" filter="url(#glow)" opacity="0.9">
+    <path d="M176 224 H368"/>
+    <path d="M234 172 L244 276 M300 172 L292 276"/>
+  </g>
+
+  <!-- stelline neon -->
+  <g filter="url(#glow)">
+    <path fill="#ffe600" d="M392 112 l5 15 15 5 -15 5 -5 15 -5 -15 -15 -5 15 -5z"/>
+    <path fill="#00f0ff" d="M130 330 l3.5 10 10 3.5 -10 3.5 -3.5 10 -3.5 -10 -10 -3.5 10 -3.5z"/>
+  </g>
+</svg>
